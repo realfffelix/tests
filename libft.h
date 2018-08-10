@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strisalpha.c                                    :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/10 15:50:44 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/10 15:50:48 by fdubois          ###   ########.fr       */
+/*   Created: 2018/08/10 15:46:57 by fdubois           #+#    #+#             */
+/*   Updated: 2018/08/10 15:49:06 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strisalpha(char *str)
-{
-	int i;
+#ifndef LIBFT_H
+# define LIBFT_H
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if ((str[i] < 'A' || str[i] > 'Z') && (str[i] < 'a' || str[i] > 'z'))
-			return (0);
-		else
-			i++;
-	}
-	return (1);
-}
+int		ft_atoi(char *str);
+long		ft_atol(char *str);
+long long	ft_atoll(char *str);
+int		ft_isalpha(int c);
+int		ft_strisalpha(char *str);
+
+#endif
