@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/10 15:46:57 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/10 17:50:16 by fdubois          ###   ########.fr       */
+/*   Created: 2018/08/10 17:50:23 by fdubois           #+#    #+#             */
+/*   Updated: 2018/08/10 18:01:09 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <stdlib.h>
 
-int		ft_atoi(char *str);
-long		ft_atol(char *str);
-long long	ft_atoll(char *str);
-int		ft_isalpha(int c);
-int		ft_strisalpha(char *str);
-int		ft_isdigit(int c);
-char		*ft_strdup(char *str);
-char		*ft_strcpy(char *dest, char *src);
-char		*ft_strncpy(char *dest, char *src, size_t n);
-
-#endif
+char	*ft_strdup(char *str)
+{
+	size_t	i;
+	size_t	count;
+	char	*ret;
+	
+	i = 0;
+	count = 0;
+	while (str[count] != '\0')
+		count++;
+	if (!(ret = (char*)malloc(sizeof(char) * count + 1)))
+		return (NULL);
+	while (str[i] != '\0')
+	{
+		ret[i] = str[i];
+		i++;
+	}
+	ret[i] = '\0';
+	return (ret);
+}
