@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 19:53:44 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/12 17:00:52 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/08/12 17:37:15 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, size_t n)
+#include <string.h>
+
+void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t i;
 
 	i = 0;
 	while (i < n)
 	{
-		((char*) s)[i] = '\0';
+		((char*) s)[i] = c;
 		i++;
 	}
+	return (s);
 }

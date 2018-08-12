@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 15:46:57 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/12 01:31:50 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/08/12 17:41:08 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int		ft_isdigit(int c);
 int		ft_isprint(int c);
 size_t		ft_strlen(char *str);
 void		ft_bzero(void *s, size_t n);
+void		*ft_memset(void *s, int c, size_t n);
+void		*ft_memcpy(void *dest, void *src, size_t n);
 char		*ft_strdup(char *str);
 char		*ft_strcpy(char *dest, char *src);
 char		*ft_strncpy(char *dest, char *src, size_t n);

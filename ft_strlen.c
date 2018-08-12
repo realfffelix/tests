@@ -6,11 +6,11 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 18:46:54 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/12 00:53:13 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/08/12 17:18:29 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <string.h>
 
 size_t	ft_strlen(char *str)
 {
