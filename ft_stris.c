@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_stris.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/12 17:06:27 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/13 13:21:41 by fdubois          ###   ########.fr       */
+/*   Created: 2018/08/10 15:50:44 by fdubois           #+#    #+#             */
+/*   Updated: 2018/08/13 12:31:25 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr(char *s)
+int	ft_stris(char *str, int c, int d)
 {
-	size_t i;
+	int i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (str[i] != '\0')
 	{
-		write(1, s + i, 1);
-		i++;
+		if (str[i] < c || str[i] > d)
+			return (0);
+		else
+			i++;
 	}
+	return (1);
 }
