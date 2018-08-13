@@ -6,16 +6,24 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 19:53:44 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/13 00:38:27 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/08/13 15:10:05 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
 
-size_t ft_strlen(char *str);
+static size_t	ft_strlen(char *str)
+{
+	size_t i;
 
-void	*ft_memmove(void *dest, void *src, size_t n)
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
+void		*ft_memmove(void *dest, void const *src, size_t n)
 {
 	size_t i;
 	char *str;

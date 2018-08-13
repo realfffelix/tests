@@ -6,13 +6,13 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 17:50:23 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/10 18:01:09 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/08/13 15:14:36 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strdup(char *str)
+char	*ft_strdup(char const *str)
 {
 	size_t	i;
 	size_t	count;

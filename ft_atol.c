@@ -6,11 +6,11 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 15:50:10 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/10 16:11:31 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/08/13 15:01:05 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long	ft_atol(char *str)
+long	ft_atol(char const *str)
 {
 	int	i;
 	long	nb;

@@ -6,13 +6,13 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/13 01:55:59 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/13 02:09:22 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/08/13 15:04:25 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char const *s1, char const *s2)
 {
 	size_t i;
 

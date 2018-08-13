@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/10 15:49:37 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/13 15:00:26 by fdubois          ###   ########.fr       */
+/*   Created: 2018/08/12 17:06:27 by fdubois           #+#    #+#             */
+/*   Updated: 2018/08/13 13:37:35 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char const *str)
+#include <unistd.h>
+
+void	ft_putendl(char const *s)
 {
-	int	i;
-	int	nb;
-	int	sign;
+	size_t i;
 
 	i = 0;
-	nb = 0;
-	sign = 1;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
-		i++;
-	if (str[i] == '-')
-		sign = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] <= '9' && str[i] >= '0')
+	while (s[i] != '\0')
 	{
-		nb = 10 * nb + (str[i] - '0');
+		write(1, s + i, 1);
 		i++;
 	}
-	return (nb * sign);
+	write(1, "\n", 1);
 }

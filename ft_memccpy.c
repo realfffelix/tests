@@ -6,14 +6,14 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/12 20:38:55 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/12 23:31:12 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/08/13 15:07:27 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
 
-void	*ft_memccpy(void *dest, void *src, int c, size_t n)
+void	*ft_memccpy(void *dest, void const *src, int c, size_t n)
 {
 	size_t i;
 

@@ -6,13 +6,13 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/12 17:06:27 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/13 13:21:41 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/08/13 13:36:51 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putstr(char *s)
+void	ft_putstr(char const *s)
 {
 	size_t i;
 

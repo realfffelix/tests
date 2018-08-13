@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/10 15:49:37 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/13 15:00:26 by fdubois          ###   ########.fr       */
+/*   Created: 2018/08/13 13:21:48 by fdubois           #+#    #+#             */
+/*   Updated: 2018/08/13 13:28:27 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char const *str)
-{
-	int	i;
-	int	nb;
-	int	sign;
+#include <unistd.h>
 
-	i = 0;
-	nb = 0;
-	sign = 1;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
-		i++;
-	if (str[i] == '-')
-		sign = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] <= '9' && str[i] >= '0')
-	{
-		nb = 10 * nb + (str[i] - '0');
-		i++;
-	}
-	return (nb * sign);
+void	ft_putchar_fd(char c, int fd);
+{
+	write(fd, &c, 1);
 }

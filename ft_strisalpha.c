@@ -6,11 +6,11 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 15:50:44 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/10 16:11:48 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/08/13 15:02:04 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strisalpha(char *str)
+int	ft_strisalpha(char const *str)
 {
 	int i;
 

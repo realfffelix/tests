@@ -6,11 +6,11 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 16:03:41 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/12 16:44:25 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/08/13 15:14:43 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcpy(char *dest, char *src)
+char *ft_strcpy(char *dest, char const *src)
 {
 	size_t i;
 

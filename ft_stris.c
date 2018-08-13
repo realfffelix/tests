@@ -6,11 +6,11 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 15:50:44 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/13 12:31:25 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/08/13 15:02:24 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_stris(char *str, int c, int d)
+int	ft_stris(char const *str, int c, int d)
 {
 	int i;
 
