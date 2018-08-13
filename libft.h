@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 15:46:57 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/13 01:15:23 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/08/13 02:09:40 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,11 @@ long long	ft_atoll(char *str);
 int		ft_isalpha(int c);
 int		ft_strisalpha(char *str);
 int		ft_isdigit(int c);
+int		ft_isalnum(int c);
 int		ft_isprint(int c);
+int 		ft_isascii(int c);
 size_t		ft_strlen(char *str);
+int		ft_strcmp(char *s1, char *s2);
 void		ft_bzero(void *s, size_t n);
 void		*ft_memalloc(size_t size);
 void		*ft_memset(void *s, int c, size_t n);
