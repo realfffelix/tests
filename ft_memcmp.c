@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/10 15:49:37 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/15 14:09:41 by fdubois          ###   ########.fr       */
+/*   Created: 2018/08/16 22:43:47 by fdubois           #+#    #+#             */
+/*   Updated: 2018/08/17 00:05:32 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char const *str)
+#include <stdlib.h>
+
+int	ft_memcmp(void const *s1, void const *s2, size_t n)
 {
-	int	i;
-	int	nb;
-	int	sign;
+	size_t i;
 
 	i = 0;
-	nb = 0;
-	sign = 1;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
+	while (i < n && ((unsigned char*) si)[i] == ((unsigned char*) s2)[i])
 		i++;
-	if (str[i] == '-')
-		sign = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] <= '9' && str[i] >= '0')
-	{
-		nb = 10 * nb + (str[i] - '0');
-		i++;
-	}
-	return (nb * sign);
+	return (((unsigned char*) s1)[i] - ((unsigned char*) s2)[i]);
 }

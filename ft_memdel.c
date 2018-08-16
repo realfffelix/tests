@@ -1,34 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/10 15:49:37 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/15 14:09:41 by fdubois          ###   ########.fr       */
+/*   Created: 2018/08/16 22:33:37 by fdubois           #+#    #+#             */
+/*   Updated: 2018/08/16 22:40:12 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char const *str)
+void	ft_memdel(void **ap)
 {
-	int	i;
-	int	nb;
-	int	sign;
-
-	i = 0;
-	nb = 0;
-	sign = 1;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
-		i++;
-	if (str[i] == '-')
-		sign = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] <= '9' && str[i] >= '0')
-	{
-		nb = 10 * nb + (str[i] - '0');
-		i++;
-	}
-	return (nb * sign);
+	free(ap);
+	*ap = NULL;
 }

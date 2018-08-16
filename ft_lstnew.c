@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/10 15:49:37 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/15 14:09:41 by fdubois          ###   ########.fr       */
+/*   Created: 2018/08/14 01:04:11 by fdubois           #+#    #+#             */
+/*   Updated: 2018/08/14 01:26:06 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char const *str)
+#include "header.h"
+
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	int	i;
-	int	nb;
-	int	sign;
+	t_list *node;
+	size_t i;
 
 	i = 0;
-	nb = 0;
-	sign = 1;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
-		i++;
-	if (str[i] == '-')
-		sign = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] <= '9' && str[i] >= '0')
+	if (!(node = (void*)malloc(content_size)))	
+		return (NULL);
+	if (content == NULL)
 	{
-		nb = 10 * nb + (str[i] - '0');
-		i++;
+		node->content = NULL;
+		node->content_size = 0;
 	}
-	return (nb * sign);
+	else
+	{
+		node->content = content;
+		node->content_size = content_size;
+	}
+	node->next = NULL;
 }

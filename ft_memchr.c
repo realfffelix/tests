@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/10 15:49:37 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/15 14:09:41 by fdubois          ###   ########.fr       */
+/*   Created: 2018/08/16 22:43:47 by fdubois           #+#    #+#             */
+/*   Updated: 2018/08/16 23:47:17 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char const *str)
+#include <stdlib.h>
+
+void	*ft_memchr(void const *s, int c, size_t n)
 {
-	int	i;
-	int	nb;
-	int	sign;
+	size_t i;
+	const void *ptr;
 
 	i = 0;
-	nb = 0;
-	sign = 1;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
-		i++;
-	if (str[i] == '-')
-		sign = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] <= '9' && str[i] >= '0')
+	while (i < n)
 	{
-		nb = 10 * nb + (str[i] - '0');
+		if (((unsigned char*) s)[i] == c)
+		{
+			ptr = s + i;
+			return (ptr);
+		}
 		i++;
 	}
-	return (nb * sign);
+	return (NULL);
 }

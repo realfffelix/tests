@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 15:46:57 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/13 15:15:10 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/08/16 23:51:19 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+
+typedef struct		s_list
+{
+	void		*content;
+	size_t		content_size;
+	struct s_list	*next;
+}			t_list;
 
 void		ft_putchar(char c);
 void		ft_putstr(char const *s);
@@ -42,9 +49,12 @@ char		*ft_strncpy(char *dest, char const *src, size_t n);
 char		**ft_strsplit(char const *s, char c);
 void		ft_bzero(void *s, size_t n);
 void		*ft_memalloc(size_t size);
+void		ft_memdel(void **ap);
 void		*ft_memset(void *s, int c, size_t n);
 void		*ft_memcpy(void *dest,  void const *src, size_t n);
 void		*ft_memccpy(void *dest, void const *src, int c, size_t n);
 void		*ft_memmove(void *dest, void const *src, size_t n);
+void		*ft_memchr(void const *s, int c, size_t n);
+int		ft_memcmp(void const *s1, void const *s2, size_t n);
 
 #endif
