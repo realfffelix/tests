@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   fr_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/13 01:55:59 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/17 23:08:42 by fdubois          ###   ########.fr       */
+/*   Created: 2018/08/17 14:56:33 by fdubois           #+#    #+#             */
+/*   Updated: 2018/08/17 15:07:16 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "header.h"
 
-int	ft_strcmp(char const *s1, char const *s2)
+char 	*ft_strcat(char *dest, char const *src)
 {
 	size_t i;
+	size_t len;
 
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+	while (dest[len] != '\0')
+		len++;
+	while (src[i] != '\0')
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		dest[len + i] = src[i];
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	dest[i] = '\0';
+	return (dest);
 }

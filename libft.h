@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 15:46:57 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/17 23:04:55 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/08/18 00:23:22 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,15 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isprint(int c);
 int 		ft_isascii(int c);
+int		ft_toupper(int c);
+int 		ft_tolower(int c);
 size_t		ft_strlen(char const *str);
 int		ft_strcmp(char const *s1, char const *s2);
+int		ft_strncmp(char const *s1, char const *s2, size_t n);
 char		*ft_strchr(char const *s, int c);
 char		*ft_strrchr(char const *s, int c);
+char		*ft_strstr(char const *haystack, char const *needle);
+char		*ft_strnstr(char const *haystack, char const *needle, size_t len);
 char		*ft_strnew(size_t size);
 char		*ft_strdup(char const *str);
 char		*ft_strcpy(char *dest, char const *src);

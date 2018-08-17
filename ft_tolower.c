@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/13 01:55:59 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/17 23:08:42 by fdubois          ###   ########.fr       */
+/*   Created: 2018/08/17 23:24:41 by fdubois           #+#    #+#             */
+/*   Updated: 2018/08/17 23:30:11 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-int	ft_strcmp(char const *s1, char const *s2)
+int ft_tolower(int c)
 {
-	size_t i;
-
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
-	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i++;
-	}
-	return (s1[i] - s2[i]);
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	else
+		return (c);
 }
