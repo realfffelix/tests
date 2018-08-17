@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/14 01:04:11 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/17 13:24:09 by fdubois          ###   ########.fr       */
+/*   Created: 2018/08/17 14:47:32 by fdubois           #+#    #+#             */
+/*   Updated: 2018/08/17 14:54:11 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+char	*ft_strncat(char *dest, char const *src, size_t n)
 {
-	t_list *node;
 	size_t i;
+	size_t len;
 
-	i = 0;
-	if (!(node = (void*)malloc(content_size)))	
-		return (NULL);
-	if (content == NULL)
+	while (dest[len] != '\0')
+		len++;
+	while (i < n && src[i] != '\0')
 	{
-		node->content = NULL;
-		node->content_size = 0;
+		dest[len + i] = src[i];
+		i++;
 	}
-	else
-	{
-		node->content = content;
-		node->content_size = content_size;
-	}
-	node->next = NULL;
-	return (node);
+	dest[len + i] = '\0';
+	return (dest);
 }
