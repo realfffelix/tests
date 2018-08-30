@@ -30,8 +30,8 @@ void		*ft_memmove(void *dest, void const *src, size_t n)
 	size_t len;
 	
 	i = 0;
-	if (ft_strlen(dest) < ft_strlen(src))
-		len = ft_strlen(src);
+	if (ft_strlen(dest) < ft_strlen((char*)src))
+		len = ft_strlen((char*)src);
 	else
 		len = ft_strlen(dest);
 	if (!(dest = (char*)malloc(sizeof(char) * len + 1)))
