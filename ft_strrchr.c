@@ -19,12 +19,14 @@ char	*ft_strrchr(char const *s, int c)
 	i = 0;
 	while (s[i] != '\0')
 		i++;
-	while (i >= 0)
+	while (i > 0)
 	{
 		if (s[i] == c)
-			return (s + i);
+			return ((char*)(s + i));
 		i--;
-		if (i == 0 && s[i] != c)
-			return (NULL);
 	}
+	if (s[i] != c)
+		return (NULL);
+	else
+		return ((char*)s);
 }
