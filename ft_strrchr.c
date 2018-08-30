@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 
-char	*ft_strrchr(char const *s, int c);
+char	*ft_strrchr(char const *s, int c)
 {
 	size_t i;
 

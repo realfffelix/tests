@@ -51,6 +51,7 @@ char		*ft_strrchr(char const *s, int c);
 char		*ft_strstr(char const *haystack, char const *needle);
 char		*ft_strnstr(char const *haystack, char const *needle, size_t len);
 char		*ft_strnew(size_t size);
+void		ft_strclr(char *s);
 char		*ft_strdup(char const *str);
 char		*ft_strcpy(char *dest, char const *src);
 char		*ft_strncpy(char *dest, char const *src, size_t n);

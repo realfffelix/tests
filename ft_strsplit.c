@@ -46,7 +46,7 @@ static size_t		charz(char const *s, size_t *i, char c)
 	return (count);
 }
 
-static void		*ft_wordcpy(char *dest, char const *src, char c)
+static void		ft_wordcpy(char *dest, char const *src, char c)
 {
 	size_t i;
 
@@ -85,5 +85,4 @@ char			**ft_strsplit(char const *s, char c)
 	}
 	tab[k] = 0;
 	return (tab);
-	free(tab);
 }

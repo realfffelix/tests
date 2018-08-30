@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+
 char *ft_strcpy(char *dest, char const *src)
 {
 	size_t i;
