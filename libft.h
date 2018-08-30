@@ -46,6 +46,8 @@ int 		ft_tolower(int c);
 size_t		ft_strlen(char const *str);
 int		ft_strcmp(char const *s1, char const *s2);
 int		ft_strncmp(char const *s1, char const *s2, size_t n);
+int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char		*ft_strchr(char const *s, int c);
 char		*ft_strrchr(char const *s, int c);
 char		*ft_strstr(char const *haystack, char const *needle);
