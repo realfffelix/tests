@@ -59,6 +59,7 @@ char		*ft_strnew(size_t size);
 void		ft_strdel(char **as);
 void		ft_strclr(char *s);
 char		*ft_strdup(char const *str);
+char		*ft_strtrim(char const *s);
 char		*ft_strcpy(char *dest, char const *src);
 char		*ft_strncpy(char *dest, char const *src, size_t n);
 char		*ft_strcat(char *dest, char const *src);
