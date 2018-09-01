@@ -65,6 +65,7 @@ char		*ft_strncpy(char *dest, char const *src, size_t n);
 char		*ft_strcat(char *dest, char const *src);
 char 		*ft_strncat(char *dest, char const *src, size_t n);
 size_t		ft_strlcat(char *dest, char const *src, size_t n); //
+char		*ft_strjoin(char const *s1, char const *s2);
 char		**ft_strsplit(char const *s, char c);
 void		ft_bzero(void *s, size_t n);
 void		*ft_memalloc(size_t size);
