@@ -1,6 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/09/02 17:04:46 by fdubois           #+#    #+#             */
+/*   Updated: 2018/09/02 17:44:18 by fdubois          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	digits(int n)
 {
@@ -41,7 +51,6 @@ static char	*ft_strrev(char *str)
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int neg;
 	int i;
 	long long nb;
 
@@ -54,7 +63,6 @@ char	*ft_itoa(int n)
 	if (nb < 0)
 	{
 		str[i] = '-';
-		neg = 1;
 		nb = -nb;
 		i++;
 	}
@@ -64,20 +72,6 @@ char	*ft_itoa(int n)
 		nb /= 10;
 		i++;
 	}
-	if (neg == 1)
-		ft_strrev(str + 1);
-	else
-		ft_strrev(str);
+	n < 0 ? ft_strrev(str + 1): ft_strrev(str);
 	return (str);
-}
-
-int	main(int ac, char **av)
-{
-	if (ac == 2)
-	{
-		char *str;
-		printf("%s", str = ft_itoa(atoi(av[1])));
-		free(str);
-	}
-	return (0);
 }
