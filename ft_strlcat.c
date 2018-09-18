@@ -6,31 +6,38 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/17 15:08:27 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/17 15:36:46 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/09/18 14:46:09 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-static size_t	ft_strlen(char *str)
-{
-	size_t i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, char const *src, size_t size)
 {
-	size_t i;
-	size_t buf;
-	
-	i = 0;
-	buf = ft_strlen(dest) + ft_strlen(src);
-	while (src[i] != '\0' &&)
+	size_t len;
+	size_t n;
+	char const *d;
+	char const *s;
+
+	n = size;
+	d = dest;
+	s = src;
+	while (n-- != 0 && *dest != '\0')
+		dest++;
+	len = dest - d;
+	n = size - len;
+	if (n-- == 0)
+		return(len + ft_strlen(src));
+	while (*src != '\0')
 	{
-		dest[ft_strlen(dest) + i] = src[i];
+		if (n != 0)
+		{
+			*dst++ = *src;
+			n--;
+		}
+		src++;
 	}
-	return (size);
+	*dst = '\0';
+
+	return (len + (src - s));
+}
