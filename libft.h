@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 15:46:57 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/18 00:23:22 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/10/03 16:10:45 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,10 @@ char		*ft_strrchr(char const *s, int c);
 char		*ft_strstr(char const *haystack, char const *needle);
 char		*ft_strnstr(char const *haystack, char const *needle, size_t len);
 char		*ft_strnew(size_t size);
+void		ft_striter(char *s, void (*f)(char *));
+void		ft_striteri(char *s, void (*f)(unsigned int, char *));
+char		*ft_strmap(char const *s, char (*f)(char));
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_strdel(char **as);
 void		ft_strclr(char *s);
 char		*ft_strdup(char const *str);

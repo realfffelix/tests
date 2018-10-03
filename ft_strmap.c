@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fffelix <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/02 17:46:32 by fdubois           #+#    #+#             */
-/*   Updated: 2018/10/03 16:25:38 by fffelix          ###   ########.fr       */
+/*   Created: 2018/09/30 16:54:00 by fffelix           #+#    #+#             */
+/*   Updated: 2018/10/03 16:09:40 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	if (as)
+	size_t	i;
+	char	*str;
+
+	if (!(str = (char*)malloc(ft_strlen(s) + 1)))
+		return (NULL);
+	i = 0;
+	if (s && f)
 	{
-	free(*as);
-	*as = NULL;
+		while (s[i] != '\0')
+		{
+			str[i] = f(s + i);
+			i++;
+		}
+		str[i] = '\0';
 	}
+	return (str);
 }
