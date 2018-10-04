@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 15:46:57 by fdubois           #+#    #+#             */
-/*   Updated: 2018/10/03 16:10:45 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/10/04 01:14:24 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,10 @@ void		*ft_memmove(void *dest, void const *src, size_t n);
 void		*ft_memchr(void const *s, int c, size_t n);
 int		ft_memcmp(void const *s1, void const *s2, size_t n);
 t_list		*ft_lstnew(void const *content, size_t content_size);
-
+void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void		ft_lstadd(t_list **alst, t_list *new);
+void		ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list*		ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif
