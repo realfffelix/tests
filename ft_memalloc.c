@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/13 00:44:15 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/13 01:10:36 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/10/05 02:17:53 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memalloc(size_t size)
 	void *mem;
 	
 	i = 0;
-	if (!(mem = (void*)malloc(sizeof(void) * size)))
+	if (!(mem = (void*)malloc(size)))
 		return (NULL);
 	while (i < size)
 	{

@@ -6,7 +6,7 @@
 /*   By: fffelix <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/30 16:54:00 by fffelix           #+#    #+#             */
-/*   Updated: 2018/10/03 16:09:40 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/10/05 02:08:40 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	{
 		while (s[i] != '\0')
 		{
-			str[i] = f(s + i);
+			str[i] = f(*(s + i));
 			i++;
 		}
 		str[i] = '\0';

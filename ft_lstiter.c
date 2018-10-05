@@ -6,7 +6,7 @@
 /*   By: fffelix <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/04 00:35:32 by fffelix           #+#    #+#             */
-/*   Updated: 2018/10/04 00:44:16 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/10/05 02:04:05 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 		while (lst != NULL)
 		{
 			f(lst);
-			lst->next;
+			lst = lst->next;
 		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/17 15:08:27 by fdubois           #+#    #+#             */
-/*   Updated: 2018/09/18 14:46:09 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/10/05 02:07:08 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ size_t	ft_strlcat(char *dest, char const *src, size_t size)
 	{
 		if (n != 0)
 		{
-			*dst++ = *src;
+			*dest++ = *src;
 			n--;
 		}
 		src++;
 	}
-	*dst = '\0';
+	*dest = '\0';
 
 	return (len + (src - s));
 }

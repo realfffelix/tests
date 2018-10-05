@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/02 17:45:14 by fdubois           #+#    #+#             */
-/*   Updated: 2018/09/02 17:45:20 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/10/05 02:05:40 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 void	ft_putnbr(int n)
 {
-	int i;
 	long long nb;
 
-	i = 0;
 	nb = n;
 	if (nb < 0)
 	{

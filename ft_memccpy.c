@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/12 20:38:55 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/13 15:07:27 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/10/05 02:29:26 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@
 void	*ft_memccpy(void *dest, void const *src, int c, size_t n)
 {
 	size_t i;
+	char	*ptr;
 
 	i = 0;
+	ptr = dest;
 	while (i < n && ((char*) src)[i] != '\0')
 	{
 		if (((char*)src)[i] == c)
-			return ((char*)(dest + i + 1));
+			return ((void *)(ptr + i + 1));
 		((char*) dest)[i] = ((char*) src)[i];
 		i++;
 	}

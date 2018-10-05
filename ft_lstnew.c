@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/14 01:04:11 by fdubois           #+#    #+#             */
-/*   Updated: 2018/10/04 01:00:34 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/10/05 02:05:20 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *node;
-	size_t i;
 
-	i = 0;
-	if (!(node = (t_list*)malloc(sizeof(node*))))	
+	if (!(node = (t_list*)malloc(sizeof(node))))	
 		return (NULL);
 	if (content == NULL)
 	{
