@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/17 14:56:33 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/17 15:09:16 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/10/05 15:10:33 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ char 	*ft_strcat(char *dest, char const *src)
 		dest[len + i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	dest[len + i] = '\0';
 	return (dest);
 }

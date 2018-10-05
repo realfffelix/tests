@@ -6,13 +6,13 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/17 23:24:41 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/17 23:30:11 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/10/05 15:04:48 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_tolower(int c)
 {
-	if (c >= 65 && c <= 90)
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	else
 		return (c);

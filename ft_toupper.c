@@ -6,13 +6,13 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/17 23:24:41 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/22 01:00:25 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/10/05 15:03:55 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_toupper(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (c >= 'a' && c <= 'z')
 		return (c - 32);
 	else
 		return (c);

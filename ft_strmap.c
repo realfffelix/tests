@@ -6,7 +6,7 @@
 /*   By: fffelix <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/30 16:54:00 by fffelix           #+#    #+#             */
-/*   Updated: 2018/10/05 02:08:40 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/10/05 15:31:28 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	if (!(str = (char*)malloc(ft_strlen(s) + 1)))
 		return (NULL);
 	i = 0;
-	if (s && f)
+	if (s != NULL && f != NULL)
 	{
 		while (s[i] != '\0')
 		{
