@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/02 17:04:46 by fdubois           #+#    #+#             */
-/*   Updated: 2018/09/02 17:44:18 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/10/08 17:19:54 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,26 +52,27 @@ char	*ft_itoa(int n)
 {
 	char	*str;
 	int i;
-	long long nb;
-
-	nb = n;
+	unsigned long long nb;
+	
+	nb = (n < 0) ? -n: n;
 	i = 0;	
 	if (!(str = (char*)malloc(sizeof(char) * digits(nb))))
 		return (NULL);
 	if (nb == 0)
 		str[i] = '0';
-	if (nb < 0)
-	{
-		str[i] = '-';
-		nb = -nb;
-		i++;
-	}
 	while (nb != 0)
 	{
 		str[i] = (nb % 10) + '0';
 		nb /= 10;
 		i++;
 	}
-	n < 0 ? ft_strrev(str + 1): ft_strrev(str);
+	if (n < 0)
+	{
+		str[i] = '-';
+		nb = -nb;
+		i++;
+	}
+	str[i] = '\0';
+	ft_strrev(str);
 	return (str);
 }

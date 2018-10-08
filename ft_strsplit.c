@@ -6,11 +6,11 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/13 11:09:08 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/13 14:04:51 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/10/08 16:38:39 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static size_t		wordz(char const *s, char c)
 {
@@ -68,9 +68,9 @@ char			**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	k = 0;
-	if (!(tab = (char**)malloc(sizeof(char*) * wordz(s, c) + 1)))
+	if (!(tab = (char**)malloc(sizeof(char**) * wordz(s, c) + 1)))
 		return (NULL);
-	while (s[i])
+	while (s[i] != '\0')
 	{
 		while (s[i] == c)
 			i++;
