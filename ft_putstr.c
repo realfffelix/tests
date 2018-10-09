@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/12 17:06:27 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/13 13:36:51 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/10/09 14:07:03 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 void	ft_putstr(char const *s)
 {
-	size_t i;
-
-	i = 0;
-	while (s[i] != '\0')
+	if (s != NULL)
 	{
-		write(1, s + i, 1);
-		i++;
+		size_t i;
+
+		i = 0;
+		while (s[i] != '\0')
+		{
+			write(1, s + i, 1);
+			i++;
+		}
 	}
 }

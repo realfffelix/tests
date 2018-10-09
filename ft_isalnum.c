@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/13 01:46:34 by fdubois           #+#    #+#             */
-/*   Updated: 2018/10/05 14:58:25 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/10/08 21:22:05 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	else
 		return (0);

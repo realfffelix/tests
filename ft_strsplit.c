@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/13 11:09:08 by fdubois           #+#    #+#             */
-/*   Updated: 2018/10/08 16:38:39 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/10/09 14:06:36 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,28 +61,31 @@ static void		ft_wordcpy(char *dest, char const *src, char c)
 
 char			**ft_strsplit(char const *s, char c)
 {
-	size_t i;
-	size_t j;
-	size_t k;
-	char **tab;
-
-	i = 0;
-	k = 0;
-	if (!(tab = (char**)malloc(sizeof(char**) * wordz(s, c) + 1)))
-		return (NULL);
-	while (s[i] != '\0')
+	if (s != NULL)
 	{
-		while (s[i] == c)
-			i++;
-		if (s[i] && s[i] != c)
+		size_t i;
+		size_t j;
+		size_t k;
+		char **tab;
+
+		i = 0;
+		k = 0;
+		if (!(tab = (char**)malloc(sizeof(char**) * wordz(s, c) + 1)))
+			return (NULL);
+		while (s[i] != '\0')
 		{
-			j = i;
-			if (!(tab[k] = (char*)malloc(sizeof(char*) * charz(s, &i, c) + 1)))
-				return (NULL);
-			ft_wordcpy(tab[k], s + j, c);
-			k++;
+			while (s[i] == c)
+				i++;
+			if (s[i] && s[i] != c)
+			{
+				j = i;
+				if (!(tab[k] = (char*)malloc(sizeof(char*) * charz(s, &i, c) + 1)))
+					return (NULL);
+				ft_wordcpy(tab[k++], s + j, c);
+			}
 		}
+		tab[k] = 0;
+		return (tab);
 	}
-	tab[k] = 0;
-	return (tab);
+	return (NULL);
 }

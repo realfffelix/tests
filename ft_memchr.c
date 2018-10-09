@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/16 22:43:47 by fdubois           #+#    #+#             */
-/*   Updated: 2018/10/05 15:21:17 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/10/08 20:58:35 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(void const *s, int c, size_t n)
 	ptr = (unsigned const char *)s;
 	while (i < n)
 	{
-		if (ptr[i] == c)
+		if (((unsigned const char*) s)[i] == c)
 		{
 			return ((void *)(ptr + i));
 		}

@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/02 17:50:54 by fdubois           #+#    #+#             */
-/*   Updated: 2018/09/02 17:51:00 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/10/09 13:59:51 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 char	*ft_strtrim(char const *s)
 {
+	if (s != NULL)
+	{
 	size_t	i;
 	size_t	start;
 	size_t	end;
@@ -21,7 +23,7 @@ char	*ft_strtrim(char const *s)
 
 	i = 0;
 	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
-			i++;
+		i++;
 	start = i;
 	while (s[i] != '\0')
 	{
@@ -30,7 +32,8 @@ char	*ft_strtrim(char const *s)
 		while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
 			i++;
 	}
-	str = ft_memalloc(end - start + 1);
+	if (!(str = (char*)malloc(sizeof(char) * (end - start + 1))))
+		return (NULL);
 	i = 0;
 	while ((start + i) <= end)
 	{
@@ -39,4 +42,7 @@ char	*ft_strtrim(char const *s)
 	}
 	str[i] = '\0';
 	return (str);
+	}
+	else
+		return (NULL);
 }
