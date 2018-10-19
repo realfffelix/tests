@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/02 17:50:54 by fdubois           #+#    #+#             */
-/*   Updated: 2018/10/09 13:59:51 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/10/19 17:27:23 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *s)
 		while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
 			i++;
 	}
-	if (!(str = (char*)malloc(sizeof(char) * (end - start + 1))))
+	if (!(str = (char*)malloc(sizeof(char) * (end - start + 2))))
 		return (NULL);
 	i = 0;
 	while ((start + i) <= end)

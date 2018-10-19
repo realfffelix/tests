@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/02 17:04:46 by fdubois           #+#    #+#             */
-/*   Updated: 2018/10/08 17:19:54 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/10/19 18:16:35 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,11 @@ static int	digits(int n)
 
 	i = 1;
 	if (n < 0)
+	{
+		n = -n;
 		i++;
-	while (n < -9 || n > 9)
+	}
+	while (n > 9)
 	{
 		i++;
 		n /= 10;
@@ -54,9 +57,9 @@ char	*ft_itoa(int n)
 	int i;
 	unsigned long long nb;
 	
-	nb = (n < 0) ? -n: n;
+	nb = (n < 0) ? (long long)(n * -1): n;
 	i = 0;	
-	if (!(str = (char*)malloc(sizeof(char) * digits(nb))))
+	if (!(str = (char*)malloc(sizeof(char) * (digits(nb) + 1))))
 		return (NULL);
 	if (nb == 0)
 		str[i] = '0';

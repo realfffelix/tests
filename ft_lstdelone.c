@@ -6,7 +6,7 @@
 /*   By: fffelix <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/04 00:17:10 by fffelix           #+#    #+#             */
-/*   Updated: 2018/10/04 00:21:22 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/10/17 20:01:42 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,11 @@ void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
 	if (alst != NULL && del != NULL)
 	{
-		del((*alst)->content, (*alst)->content_size);
-		free(*alst);
-		alst = NULL;
+		t_list *tmp;
+
+		tmp = *alst;
+		del(tmp->content, tmp->content_size);
+		free(tmp);
+		tmp = NULL;
 	}
 }

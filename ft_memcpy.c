@@ -6,20 +6,24 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/12 17:49:16 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/13 15:07:44 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/10/18 16:25:01 by fffelix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-void	*ft_memcpy(char *dest, char const *src, size_t n)
+void	*ft_memcpy(void *dest, void const *src, size_t n)
 {
 	size_t i;
+	unsigned char *d;
+	unsigned char *s;
 
 	i = 0;
+	d = (unsigned char*)dest;
+	s = (unsigned char*)src;
 	while (i < n)
 	{
-		((char*) dest)[i] = ((char*) src)[i];
+		d[i] = s[i];
 		i++;
 	}
 	return (dest);
