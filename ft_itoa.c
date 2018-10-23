@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/02 17:04:46 by fdubois           #+#    #+#             */
-/*   Updated: 2018/10/19 18:16:35 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/10/22 15:59:48 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ static int	digits(int n)
 {
 	int i;
 
-	i = 1;
+	i = 2;
+	if (n == -2147483648)
+		return (12);
 	if (n < 0)
 	{
 		n = -n;
@@ -30,52 +32,30 @@ static int	digits(int n)
 	return (i);
 }
 
-static char	*ft_strrev(char *str)
-{
-	int i;
-	int len;
-	char tmp;
-
-	i = 0;
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	while (i < len / 2)
-	{
-		tmp = str[len - i - 1];
-		str[len - i - 1] = str[i];
-		str[i] = tmp;
-		i++;
-	}
-	return (str);
-}
-
-
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int i;
 	unsigned long long nb;
-	
-	nb = (n < 0) ? (long long)(n * -1): n;
-	i = 0;	
-	if (!(str = (char*)malloc(sizeof(char) * (digits(nb) + 1))))
+	int len;
+
+	len = digits(n);
+	if (!(str = (char*)malloc(sizeof(char) * len)))
 		return (NULL);
+	str[--len] = '\0';
+	if (n == -2147483648)
+	{
+		ft_strncpy(str, "-2147483648", 11);
+		return (str);
+	}
+	nb = (n < 0) ? (long long)(n * -1): n;
 	if (nb == 0)
-		str[i] = '0';
+		str[--len] = '0';
 	while (nb != 0)
 	{
-		str[i] = (nb % 10) + '0';
+		str[--len] = (nb % 10) + '0';
 		nb /= 10;
-		i++;
 	}
 	if (n < 0)
-	{
-		str[i] = '-';
-		nb = -nb;
-		i++;
-	}
-	str[i] = '\0';
-	ft_strrev(str);
+		str[--len] = '-';
 	return (str);
 }

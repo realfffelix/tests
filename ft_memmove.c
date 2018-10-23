@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 19:53:44 by fdubois           #+#    #+#             */
-/*   Updated: 2018/10/18 23:04:07 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/10/22 18:20:42 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,27 @@
 void		*ft_memmove(void *dest, void const *src, size_t n)
 {
 	size_t i;
-	size_t m;
 	unsigned char *d;
 	unsigned char *s;
-	unsigned char tmp[n];
 	
 	i = 0;
-	m = n;
 	d = (unsigned char*)dest;
 	s = (unsigned char*)src;
-	while (i < m)
+	if (s < d)
 	{
-		tmp[i] = s[i];
-		i++;
+		while (i < n)
+		{
+			d[n - i - 1] = s[n - i - 1];
+			i++;
+		}
 	}
-	i = 0;
-	while (i < n)
+	else
 	{
-		d[i] = tmp[i];
-		i++;
+		while (i < n)
+		{
+			d[i] = s[i];
+			i++;
+		}
 	}
 	return (dest);
 }
