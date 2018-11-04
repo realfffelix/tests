@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 15:46:57 by fdubois           #+#    #+#             */
-/*   Updated: 2018/10/10 17:04:13 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/10/23 02:22:41 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ typedef struct		s_list
 	size_t		content_size;
 	struct s_list	*next;
 }			t_list;
-
 
 void		ft_putchar(char c);
 void		ft_putnbr(int n);

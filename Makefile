@@ -6,7 +6,7 @@
 #    By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/22 01:06:47 by fdubois           #+#    #+#              #
-#    Updated: 2018/08/22 01:25:27 by fdubois          ###   ########.fr        #
+#    Updated: 2018/11/04 18:30:25 by fdubois          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,5 +25,9 @@ clean:
 	
 fclean: clean
 	rm -f $(NAME)
+	rm -f libft.so
 
 re: fclean all
+
+so:
+	$(CC) -fPIC *.c -shared -o libft.so
