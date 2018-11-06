@@ -6,15 +6,15 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 15:50:10 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/15 14:10:40 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/11/06 16:47:57 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 long	ft_atol(char const *str)
 {
-	int	i;
+	int		i;
 	long	nb;
-	long	sign;	
+	long	sign;
 
 	i = 0;
 	nb = 0;

@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 17:50:23 by fdubois           #+#    #+#             */
-/*   Updated: 2018/08/13 15:14:36 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/11/06 16:59:04 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strdup(char const *str)
 	size_t	i;
 	size_t	count;
 	char	*ret;
-	
+
 	i = 0;
 	count = 0;
 	while (str[count] != '\0')

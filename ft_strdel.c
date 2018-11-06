@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/02 17:46:32 by fdubois           #+#    #+#             */
-/*   Updated: 2018/10/03 16:25:38 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/11/06 16:58:09 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_strdel(char **as)
 {
 	if (as)
 	{
-	free(*as);
-	*as = NULL;
+		free(*as);
+		*as = NULL;
 	}
 }

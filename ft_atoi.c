@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 15:49:37 by fdubois           #+#    #+#             */
-/*   Updated: 2018/10/19 17:53:59 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/11/06 16:46:55 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_atoi(char const *str)
 		if (nb == 214748364 && str[i] == '8' && sign == -1)
 			return (-2147483648);
 		if (((unsigned long long)((nb * 10 + str[i] - '0'))) > 2147483647)
-			return (sign == -1? 0: -1);
+			return (sign == -1 ? 0 : -1);
 		nb = 10 * nb + (str[i] - '0');
 		i++;
 	}

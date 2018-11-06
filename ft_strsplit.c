@@ -6,13 +6,13 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/13 11:09:08 by fdubois           #+#    #+#             */
-/*   Updated: 2018/11/05 18:26:17 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/11/06 17:42:32 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t		wordz(char const *s, char c)
+static size_t	wordz(char const *s, char c)
 {
 	size_t i;
 	size_t count;
@@ -33,7 +33,7 @@ static size_t		wordz(char const *s, char c)
 	return (count);
 }
 
-static size_t		charz(char const *s, size_t *i, char c)
+static size_t	charz(char const *s, size_t *i, char c)
 {
 	size_t count;
 
@@ -61,31 +61,29 @@ static void		ft_wordcpy(char *dest, char const *src, char c)
 
 char			**ft_strsplit(char const *s, char c)
 {
-	if (s != NULL)
-	{
-		size_t i;
-		size_t j;
-		size_t k;
-		char **tab;
+	size_t	i;
+	size_t	j;
+	size_t	k;
+	char	**tab;
 
-		i = 0;
-		k = 0;
-		if (!(tab = (char**)malloc(sizeof(char**) * wordz(s, c) + 1)))
-			return (NULL);
-		while (s[i] != '\0')
+	if (s == NULL)
+		return (NULL);
+	i = 0;
+	k = 0;
+	if (!(tab = (char**)malloc(sizeof(char**) * wordz(s, c) + 1)))
+		return (NULL);
+	while (s[i] != '\0')
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i] && s[i] != c)
 		{
-			while (s[i] == c)
-				i++;
-			if (s[i] && s[i] != c)
-			{
-				j = i;
-				if (!(tab[k] = (char*)malloc(sizeof(char*) * charz(s, &i, c) + 1)))
-					return (NULL);
-				ft_wordcpy(tab[k++], s + j, c);
-			}
+			j = i;
+			if (!(tab[k] = (char*)malloc(sizeof(char*) * charz(s, &i, c) + 1)))
+				return (NULL);
+			ft_wordcpy(tab[k++], s + j, c);
 		}
-		tab[k] = 0;
-		return (tab);
 	}
-	return (NULL);
+	tab[k] = 0;
+	return (tab);
 }

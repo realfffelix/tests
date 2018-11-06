@@ -6,13 +6,13 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/17 14:56:33 by fdubois           #+#    #+#             */
-/*   Updated: 2018/10/05 15:10:33 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/11/06 16:57:58 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char 	*ft_strcat(char *dest, char const *src)
+char	*ft_strcat(char *dest, char const *src)
 {
 	size_t i;
 	size_t len;

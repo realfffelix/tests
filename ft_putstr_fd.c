@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/12 17:06:27 by fdubois           #+#    #+#             */
-/*   Updated: 2018/10/09 14:07:32 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/11/06 16:57:29 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	size_t i;
+
+	i = 0;
 	if (s != NULL)
 	{
-		size_t i;
-
-		i = 0;
 		while (s[i] != '\0')
 		{
 			write(fd, s + i, 1);

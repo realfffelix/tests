@@ -6,7 +6,7 @@
 /*   By: fdubois <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 15:18:30 by fdubois           #+#    #+#             */
-/*   Updated: 2018/11/06 16:12:10 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/11/06 17:32:35 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,36 @@
 
 char	*ft_douille(char const *s)
 {
-		int		i;
-		size_t	start;
-		size_t	end;
-		char	*str;
+	int		i;
+	size_t	start;
+	size_t	end;
+	char	*str;
 
-		i = 0;
+	i = 0;
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+		i++;
+	if (s[i] == '\0')
+		return ("\0");
+	start = i;
+	while (s[i] != '\0')
+	{
+		while (s[i] && s[i] != ' ' && s[i] != '\t' && s[i] != '\n')
+			end = i++;
 		while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
 			i++;
-		if (s[i] == '\0')
-			return ("\0");
-		start = i;
-		while (s[i] != '\0')
-		{
-			while (s[i] && s[i] != ' ' && s[i] != '\t' && s[i] != '\n')
-				end = i++;
-			while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
-				i++;
-		}
-		if (!(str = (char*)malloc(sizeof(char) * (end - start + 2))))
-			return (NULL);
-		i = -1;
-		while ((++i + start) <= end)
-			str[i] = s[start + i];
-		str[i] = '\0';
-		return (str);
+	}
+	if (!(str = (char*)malloc(sizeof(char) * (end - start + 2))))
+		return (NULL);
+	i = -1;
+	while ((++i + start) <= end)
+		str[i] = s[start + i];
+	str[i] = '\0';
+	return (str);
 }
 
 char	*ft_strtrim(char const *s)
 {
-		if (s == NULL)
-			return (NULL);
-		return (ft_douille(s));
+	if (s == NULL)
+		return (NULL);
+	return (ft_douille(s));
 }

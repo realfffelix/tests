@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/16 22:33:37 by fdubois           #+#    #+#             */
-/*   Updated: 2018/09/25 14:51:02 by fffelix          ###   ########.fr       */
+/*   Updated: 2018/11/06 16:53:16 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_memdel(void **ap)
 {
 	if (ap != NULL)
 	{
-	free(*ap);
-	*ap = NULL;
+		free(*ap);
+		*ap = NULL;
 	}
 }

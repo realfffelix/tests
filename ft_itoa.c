@@ -6,7 +6,7 @@
 /*   By: fdubois <fdubois@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/02 17:04:46 by fdubois           #+#    #+#             */
-/*   Updated: 2018/10/22 15:59:48 by fdubois          ###   ########.fr       */
+/*   Updated: 2018/11/06 16:50:58 by fdubois          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ static int	digits(int n)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
-	char	*str;
-	unsigned long long nb;
-	int len;
+	char				*str;
+	unsigned long long	nb;
+	int					len;
 
 	len = digits(n);
 	if (!(str = (char*)malloc(sizeof(char) * len)))
@@ -47,7 +47,7 @@ char	*ft_itoa(int n)
 		ft_strncpy(str, "-2147483648", 11);
 		return (str);
 	}
-	nb = (n < 0) ? (long long)(n * -1): n;
+	nb = (n < 0) ? (long long)(n * -1) : n;
 	if (nb == 0)
 		str[--len] = '0';
 	while (nb != 0)
